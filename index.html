@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="icons.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Myadmin</title>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="jquery-3.5.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+      <script type="text/javascript" src="Chart.min.js"></script>
+      <link rel="stylesheet" href="Chart.min.css">
+
+
+    
+
+      <script type="text/javascript">
+        $( document ).ready(function(){
+        $('.sidenav').sidenav();
+      })
+      </script>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $('.fixed-action-btn').floatingActionButton();
+        });
+      </script>
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $('.modal').modal();
+      });  
+       </script>
+
+
+<script>
+  window.onload = function () {
+  
+  var chart = new CanvasJS.Chart("chartContainer", {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+      text: "Daily Visitor"
+    },
+    axisY:{
+      includeZero: false
+    },
+    data: [{        
+      type: "line", 
+          indexLabelFontSize: 16,
+      dataPoints: [
+        { y: 450 },
+        { y: 414},
+        { y: 520, indexLabel: "\u2191 highest",markerColor: "red", markerType: "triangle" },
+        { y: 460 },
+        { y: 450 },
+        { y: 500 },
+        { y: 480 },
+        { y: 480 },
+        { y: 410 , indexLabel: "\u2193 lowest",markerColor: "DarkSlateGrey", markerType: "cross" },
+        { y: 500 },
+        { y: 480 },
+        { y: 510 }
+      ]
+    }]
+  });
+  chart.render();
+  
+  }
+  </script>     
+  <script src="https://cdn.ckeditor.com/4.14.1/standard/ckeditor.js"></script>
+</head>
+<body>
+
+  <nav class="blue"> 
+    <div class="container">
+    <div class="nav-wrapper">
+    <a href="#" class="brand-logo">MYadmin</a>
+    <a href="#" data-target="demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li  class="active" ><a href="index.html">Dashboard</a></li>
+        <li><a href="post.html">Posts</a></li>
+        <li><a href="categorie.html">Categorie</a></li>
+        <li><a href="comment.html">Comments</a></li>
+        <li><a href="user.html">Users</a></li>        
+        <li><a href="#" data-target="demo" class="sidenav-trigger show-on-medium-and-up"><i class="material-icons">menu</i></a></li>
+      </ul>
+    </div> 
+  </div>
+</nav>
+
+<!--Side bar Mobile-->
+    <ul id="demo" class="sidenav" >
+      <li> 
+        <div class="user-view">
+          <div class="background">
+          <img src="1.jpg" alt="" style="width: 300px;">
+          </div>
+          <a href="#!user"><img class="circle cyan lighten-4" src="1.png" alt="" style="width: 60px; height: 60px;"></a>
+          <a href="#!name"><span class="white-text name">Hadizatou Tchiffa</span></a>
+          <a href="#!email"><span class="white-text email">Hdz@gmail.com </span> </a>
+        </div>
+      </li>
+    <li><div class="devider"></div></li>
+    <li class="active" ><a href="index.html"><i class="material-icons left">view_quilt</i>Dashboard</a></li>
+    <li><a href="posts.html">Posts</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="comments.html">Comments</a></li>
+    <li><a href="users.html">Users</a></li>   
+    <li class="divider"></li>
+    <li ><a class="grey-text" href="#">Account Controls</a></li> 
+    <li><a href="#">Logout</a></li> 
+
+  </ul>
+  </div>
+   
+  
+
+<!--4cards-->
+<div class="row center-align">
+    <div class="col s12 m3">
+      <div class="card blue white-text">
+        <div class="card-content">
+          <i class="medium material-icons ">sentiment_very_satisfied</i>
+          <h6 class="card-title">Monthly Visitors</h6>
+          <h5>35900</h5>
+          <div class="progress">
+              <div class="determinate white" style="width: 50%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m3">
+      <div class="card">
+        <div class="card-content">
+          <i class="material-icons medium">create</i>
+          <h6 class="card-title">Blog Posts</h6>
+          <h5>207</h5>
+          <div class="progress">
+              <div class="determinate" style="width: 15%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m3">
+      <div class="card blue white-text">
+        <div class="card-content">
+          <i class="material-icons medium">mode_comment</i>
+          <h6 class="card-title">Comments</h6>
+          <h5>2300</h5>
+          <div class="progress">
+              <div class="determinate white" style="width: 35%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col s12 m3">
+      <div class="card">
+        <div class="card-content">
+          <i class="material-icons medium">people</i>
+          <h6 class="card-title">Users</h6>
+          <h5>410</h5>
+          <div class="progress">
+              <div class="determinate " style="width: 20%;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    
+<!--graph-->
+<div class="row blue lighten-4">
+  <div class="col s12 m8">
+    <div class="card">
+      <div class="card-content">
+        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+      </div>
+    </div>
+  </div>
+<!--cote drt-->
+  <div class="col s12 m4">
+    <div class="card">
+      <div class="card-content">
+        <h5 class="card-title">Last Comments</h5>
+        <ul class="collection">
+          <li class="collection-item avatar">
+            <img src="1.png" alt="" class="circle" style="width: 40px;">
+            <span class="title">Ibrah Habou</span>
+            <p>Lorem ipsum dolor sit amet consectetur  <br>
+            <span class="green-text">Approve</span> | <span class="red-text">Deny</span>
+            </p>
+          </li>
+
+          <li class="collection-item avatar">
+            <img src="1.png" alt="" class="circle" style="width: 40px;">
+            <span class="title">Ibrah Habou</span>
+            <p>Lorem ipsum dolor sit amet consectetur  <br>
+            <span class="green-text">Approve</span> | <span class="red-text">Deny</span>
+            </p>
+          </li>
+
+          <li class="collection-item avatar">
+            <img src="1.png" alt="" class="circle" style="width: 40px;">
+            <span class="title">Ibrah Habou</span>
+            <p>Lorem ipsum dolor sit amet consectetur  <br>
+            <span class="green-text">Approve</span> | <span class="red-text">Deny</span>
+            </p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--post-->
+<div class="row grey lighten-4">
+  <div class="col s12 m8">
+    <div class="card">
+      <div class="card-content">
+        <h6 class="card-title">Recents Post</h6>
+        <table class=" striped">
+          <thead>
+            <tr>
+              <th class="data-field">Title</th>
+              <th class="data-field">Category</th>
+              <th class="data-field"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Post One</td>
+              <td>Web Development</td>
+              <td><button class="btn blue">DETAILS</button></td>
+            </tr>
+            <tr>
+              <td>Post One</td>
+              <td>Graphic Design</td>
+              <td><button class="btn blue">DETAILS</button></td>
+            </tr>
+            <tr>
+              <td>Post One</td>
+              <td>Web Development</td>
+              <td><button class="btn blue">DETAILS</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m4">
+    <div class="card">
+      <div class="card-content">
+        <h6 class="card-title">Quick Todo</h6>
+        <div class="input-field">
+          <input type="text" id="todo">
+          <label for="todo">Add ToDo</label>
+        </div>
+        <ul class="collection">
+          <li class="collection-item">Todo One <span class="badge"><i class="material-icons green-text">clear</i></span></li>
+          <li class="collection-item">Todo Two <span class="badge"><i class="material-icons green-text">clear</i></span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--FAB!-->
+<div>
+  <div class="fixed-action-btn" style="bottom: 30px;right: 24px;">
+    <div class="btn-floating btn-large red"><i class="large material-icons">add</i></div>
+      <ul>
+        <li><a href="#mod" class="btn-floating blue modal-trigger"><i class="material-icons">create</i></a></li>
+        <li><a href="#moe" class="btn-floating blue modal-trigger"><i class="material-icons">folder</i></a></li>
+        <li><a href="#moy" class="btn-floating blue modal-trigger"><i class="material-icons">people</i></a></li>
+      </ul>
+  </div>
+</div>
+
+<!--Modals1-->
+<div id="mod" class="modal">
+  <div class="modal-content">
+    <h5>Add Post</h5>
+    <div class="input-field">
+      <input id="add" type="text">
+      <label for="add">Title</label>
+    </div>
+    <div class="input-field">
+      <input id="add" type="text" placeholder="Select Option">
+      <label for="add">Categorie </label>
+    </div>
+    <textarea name="editor1"></textarea>
+  <div class="modal-footer">
+    <button class="btn modal-close waves-effect waves-blus blue">SUBMIT</button>
+  </div>
+  </div>
+</div>
+<!--Modals 2-->
+<div class="modal" id="moe">
+  <div class="modal-content">
+    <h5>Add Category</h5>
+  <div class="input-field">
+    <input type="text" id="ty">
+    <label for="ty">Title</label>
+  </div>
+  <div class="modal-footer">
+    <button class="btn modal-close waves-effect waves-blus blue">SUBMIT</button>
+  </div>
+  </div>
+</div>
+
+<!--Modals 3-->
+<div class="modal" id="moy">
+  <div class="modal-content">
+    <h5>Add User</h5>
+    <div class="input-field">
+      <input type="text" id="na">
+      <label for="na">Name</label>
+    </div>
+    <div class="input-field">
+      <input type="email" id="ema">
+      <label for="ema">Email</label>
+    </div>
+  
+  <div class="input-field">
+    <input type="password" id="pass">
+    <label for="pass">Password</label>
+  </div>
+  <div class="input-field">
+    <input type="password" id="passe">
+    <label for="passe">Confirm Password</label>
+  </div>
+  <div class="modal-footer">
+    <button class="btn modal-close waves-effect waves-blus blue">SUBMIT</button>
+  </div>
+</div>
+</div>
+
+
+
+
+  
+   
+    <footer class="page-footer blue " style="position:relative; margin-bottom:0px" >
+      <div class=" white-text  center-align" style="padding-bottom: 20px;">
+          <h6>MyAdmin Codeloccol Copyright <script>document.write(new Date().getFullYear())</script> </h6>
+      </div>
+      </footer>
+   
+      <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      <script>
+        CKEDITOR.replace( 'editor1' );
+</script>
+
+</body>
+</html>
